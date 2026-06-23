@@ -1,0 +1,87 @@
+{
+  "document": "11 (1965) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 693,
+      "line_count": 11,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2734,
+      "line_count": 38,
+      "numbered_entry_lines": 9,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2934,
+      "line_count": 44,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 3422,
+      "line_count": 48,
+      "numbered_entry_lines": 24,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 3325,
+      "line_count": 39,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 3226,
+      "line_count": 42,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2864,
+      "line_count": 42,
+      "numbered_entry_lines": 13,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 3105,
+      "line_count": 42,
+      "numbered_entry_lines": 2,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 631,
+      "line_count": 12,
+      "numbered_entry_lines": 6,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "ADDENDA",
+    "ECLOGUES AND GEORGIOS",
+    "GENERAL STUDIES",
+    "IUSSU IMP CAE SARIS DIVI F",
+    "PRAEF FABR CAESARIS DIVI F",
+    "TEXTS AND TRANSLATIONS",
+    "THE AENEID"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "document": "23 (1977) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 614,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2920,
+      "line_count": 51,
+      "numbered_entry_lines": 7,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2337,
+      "line_count": 56,
+      "numbered_entry_lines": 18,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 3127,
+      "line_count": 76,
+      "numbered_entry_lines": 5,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 2940,
+      "line_count": 58,
+      "numbered_entry_lines": 11,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 2620,
+      "line_count": 87,
+      "numbered_entry_lines": 16,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 3312,
+      "line_count": 72,
+      "numbered_entry_lines": 4,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 2680,
+      "line_count": 55,
+      "numbered_entry_lines": 11,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 2890,
+      "line_count": 62,
+      "numbered_entry_lines": 7,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.00034602076124567473
+    },
+    {
+      "page_number": 10,
+      "char_count": 2710,
+      "line_count": 59,
+      "numbered_entry_lines": 12,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 2932,
+      "line_count": 55,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 2941,
+      "line_count": 63,
+      "numbered_entry_lines": 7,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0010200612036722204
+    },
+    {
+      "page_number": 13,
+      "char_count": 2646,
+      "line_count": 70,
+      "numbered_entry_lines": 13,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 14,
+      "char_count": 2693,
+      "line_count": 69,
+      "numbered_entry_lines": 9,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 15,
+      "char_count": 2778,
+      "line_count": 75,
+      "numbered_entry_lines": 15,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 2459,
+      "line_count": 65,
+      "numbered_entry_lines": 0,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "ANCIENT AUTHORS AFTER VERGIL",
+    "APPENDIX VERGILIANA",
+    "BIBLIOGRAPHY",
+    "COMPUTER STUDIES",
+    "ECLOGUES: GENERAL STUDIES",
+    "ECLOGUES: INDIVIDUAL POEMS",
+    "EDITIONS, TRANSLATIONS",
+    "GEORGICS: GENERAL STUDIES",
+    "GEORGICS: INDIVIDUAL BOOKS",
+    "INTERPRETATION AND TEXT CRITICISM",
+    "LEIPZIG",
+    "MANUSCRIPTS",
+    "RELIGION AND PHILOSOPHY",
+    "ROME AND AUGUSTUS",
+    "STYLE, LANGUAGE, METRE",
+    "THE AENEID: CHARACTERS",
+    "THE AENEID: GENERAL STUDIES",
+    "THE AENEID: GEOGRAPHY AND ARCHAEOLOGY",
+    "THE AENEID: INDIVIDUAL BOOKS",
+    "THE TROJAN LEGEND",
+    "THESAURUS LINGUAE LATINAE",
+    "VERGIL AND EARLIER WRITERS",
+    "VERGIL AND LATER AGES",
+    "VERGIL AND OTHER AUGUSTAN POETS",
+    "VERGILIUS"
+  ]
+}

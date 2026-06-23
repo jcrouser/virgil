@@ -1,0 +1,292 @@
+{
+  "total_records": 10572,
+  "parsed_documents": [
+    {
+      "filename": "11 (1965) - McKay.pdf",
+      "records": 54,
+      "status": "parsed"
+    },
+    {
+      "filename": "13 (1967) - McKay.pdf",
+      "records": 54,
+      "status": "parsed"
+    },
+    {
+      "filename": "19 (1973) - McKay.pdf",
+      "records": 81,
+      "status": "parsed"
+    },
+    {
+      "filename": "20 (1974) - McKay.pdf",
+      "records": 65,
+      "status": "parsed"
+    },
+    {
+      "filename": "21 (1975) - McKay.pdf",
+      "records": 306,
+      "status": "parsed"
+    },
+    {
+      "filename": "22 (1976) - McKay.pdf",
+      "records": 336,
+      "status": "parsed"
+    },
+    {
+      "filename": "23 (1977) - McKay.pdf",
+      "records": 148,
+      "status": "parsed"
+    },
+    {
+      "filename": "24 (1978) - McKay.pdf",
+      "records": 486,
+      "status": "parsed"
+    },
+    {
+      "filename": "25 (1979) - McKay.pdf",
+      "records": 161,
+      "status": "parsed"
+    },
+    {
+      "filename": "26 (1980) - McKay.pdf",
+      "records": 398,
+      "status": "parsed"
+    },
+    {
+      "filename": "28 (1982) - McKay.pdf",
+      "records": 555,
+      "status": "parsed"
+    },
+    {
+      "filename": "29 (1983) - McKay.pdf",
+      "records": 807,
+      "status": "parsed"
+    },
+    {
+      "filename": "30 (1984) - McKay.pdf",
+      "records": 184,
+      "status": "parsed"
+    },
+    {
+      "filename": "31 (1985) - McKay.pdf",
+      "records": 211,
+      "status": "parsed"
+    },
+    {
+      "filename": "32 (1986) - McKay.pdf",
+      "records": 269,
+      "status": "parsed"
+    },
+    {
+      "filename": "33 (1987) - McKay.pdf",
+      "records": 137,
+      "status": "parsed"
+    },
+    {
+      "filename": "34 (1988) - McKay.pdf",
+      "records": 552,
+      "status": "parsed"
+    },
+    {
+      "filename": "35 (1989) - McKay.pdf",
+      "records": 421,
+      "status": "parsed"
+    },
+    {
+      "filename": "36 (1990) - McKay.pdf",
+      "records": 353,
+      "status": "parsed"
+    },
+    {
+      "filename": "37 (1991) - McKay.pdf",
+      "records": 524,
+      "status": "parsed"
+    },
+    {
+      "filename": "38 (1992) - McKay.pdf",
+      "records": 277,
+      "status": "parsed"
+    },
+    {
+      "filename": "39 (1993) - McKay.pdf",
+      "records": 354,
+      "status": "parsed"
+    },
+    {
+      "filename": "40 (1994) - McKay.pdf",
+      "records": 265,
+      "status": "parsed"
+    },
+    {
+      "filename": "41 (1995) - McKay.pdf",
+      "records": 229,
+      "status": "parsed"
+    },
+    {
+      "filename": "42 (1996) - McKay.pdf",
+      "records": 369,
+      "status": "parsed"
+    },
+    {
+      "filename": "43 (1997) - McKay.pdf",
+      "records": 233,
+      "status": "parsed"
+    },
+    {
+      "filename": "44 (1998) - McKay.pdf",
+      "records": 249,
+      "status": "parsed"
+    },
+    {
+      "filename": "45 (1999) - McKay.pdf",
+      "records": 295,
+      "status": "parsed"
+    },
+    {
+      "filename": "46 (2000) - McKay.pdf",
+      "records": 239,
+      "status": "parsed"
+    },
+    {
+      "filename": "47 (2001) - McKay.pdf",
+      "records": 235,
+      "status": "parsed"
+    },
+    {
+      "filename": "49 (2003) - McKay.pdf",
+      "records": 227,
+      "status": "parsed"
+    },
+    {
+      "filename": "50 (2004) - McKay.pdf",
+      "records": 219,
+      "status": "parsed"
+    },
+    {
+      "filename": "52 (2005) - McKay.pdf",
+      "records": 229,
+      "status": "parsed"
+    },
+    {
+      "filename": "52 (2006) - McKay.pdf",
+      "records": 245,
+      "status": "parsed"
+    },
+    {
+      "filename": "53 (2007) - Werner.pdf",
+      "records": 281,
+      "status": "parsed"
+    },
+    {
+      "filename": "54 (2008) - Werner.pdf",
+      "records": 186,
+      "status": "parsed"
+    },
+    {
+      "filename": "55 (2009) - Werner.pdf",
+      "records": 338,
+      "status": "parsed"
+    }
+  ],
+  "skipped_documents": [
+    {
+      "filename": "10 (1964) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "12 (1966) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "14 (1968) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "15 (1969) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "16 (1970) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "17 (1971) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "18 (1972) - McKay.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "27 (1981) - McKay.pdf",
+      "reason": "null"
+    },
+    {
+      "filename": "48 (2002) - McKay.pdf",
+      "reason": "null"
+    },
+    {
+      "filename": "56 (2010) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "57 (2011) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "58 (2012) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "59 (2013) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "60 (2014) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "61 (2015) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "62 (2016) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "63 (2017) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "64 (2018) - Werner.pdf",
+      "reason": "null"
+    },
+    {
+      "filename": "65 (2019) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "66 (2020) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "67 (2021) - NO BIBLIOGRAPHY.pdf",
+      "reason": "null"
+    },
+    {
+      "filename": "68 (2022) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "69 (2023) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "70 (2024) - Werner.pdf",
+      "reason": "narrative"
+    },
+    {
+      "filename": "71 (2025)- Werner.pdf",
+      "reason": "narrative"
+    }
+  ]
+}

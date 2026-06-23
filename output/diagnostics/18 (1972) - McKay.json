@@ -1,0 +1,142 @@
+{
+  "document": "18 (1972) - McKay.pdf",
+  "parser_family": "narrative",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 614,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 4817,
+      "line_count": 145,
+      "numbered_entry_lines": 4,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.00020759809009757111
+    },
+    {
+      "page_number": 3,
+      "char_count": 5631,
+      "line_count": 124,
+      "numbered_entry_lines": 0,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 6097,
+      "line_count": 142,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 5481,
+      "line_count": 152,
+      "numbered_entry_lines": 2,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 4793,
+      "line_count": 180,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 5427,
+      "line_count": 212,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 6645,
+      "line_count": 81,
+      "numbered_entry_lines": 2,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.00015048908954100828
+    },
+    {
+      "page_number": 9,
+      "char_count": 6743,
+      "line_count": 88,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 6859,
+      "line_count": 108,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 6191,
+      "line_count": 80,
+      "numbered_entry_lines": 8,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 5251,
+      "line_count": 180,
+      "numbered_entry_lines": 14,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0007617596648257475
+    },
+    {
+      "page_number": 13,
+      "char_count": 5215,
+      "line_count": 168,
+      "numbered_entry_lines": 26,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 14,
+      "char_count": 7107,
+      "line_count": 238,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0002814126917123962
+    },
+    {
+      "page_number": 15,
+      "char_count": 6745,
+      "line_count": 82,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 3595,
+      "line_count": 132,
+      "numbered_entry_lines": 0,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID",
+    "APPENDIX VERGILIANA",
+    "ECLOGUES",
+    "GEORGICS",
+    "QUESTUS EQUINUS",
+    "VERGILIUS"
+  ]
+}

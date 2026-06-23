@@ -1,0 +1,201 @@
+{
+  "document": "41 (1995) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 697,
+      "line_count": 11,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2060,
+      "line_count": 36,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 1870,
+      "line_count": 35,
+      "numbered_entry_lines": 12,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0005347593582887701
+    },
+    {
+      "page_number": 4,
+      "char_count": 2031,
+      "line_count": 35,
+      "numbered_entry_lines": 11,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 2132,
+      "line_count": 37,
+      "numbered_entry_lines": 12,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 2486,
+      "line_count": 40,
+      "numbered_entry_lines": 17,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2247,
+      "line_count": 41,
+      "numbered_entry_lines": 11,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 2499,
+      "line_count": 42,
+      "numbered_entry_lines": 22,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 2064,
+      "line_count": 40,
+      "numbered_entry_lines": 11,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.00048449612403100775
+    },
+    {
+      "page_number": 10,
+      "char_count": 2173,
+      "line_count": 34,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 1417,
+      "line_count": 30,
+      "numbered_entry_lines": 10,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 2106,
+      "line_count": 39,
+      "numbered_entry_lines": 14,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 13,
+      "char_count": 1810,
+      "line_count": 34,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0005524861878453039
+    },
+    {
+      "page_number": 14,
+      "char_count": 1936,
+      "line_count": 35,
+      "numbered_entry_lines": 11,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 15,
+      "char_count": 1908,
+      "line_count": 34,
+      "numbered_entry_lines": 13,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 2263,
+      "line_count": 37,
+      "numbered_entry_lines": 17,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 17,
+      "char_count": 2342,
+      "line_count": 41,
+      "numbered_entry_lines": 10,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 18,
+      "char_count": 1873,
+      "line_count": 33,
+      "numbered_entry_lines": 12,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 19,
+      "char_count": 1937,
+      "line_count": 38,
+      "numbered_entry_lines": 14,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 20,
+      "char_count": 749,
+      "line_count": 25,
+      "numbered_entry_lines": 3,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID: GENERAL",
+    "AENEID: LEGENDS AND MYTHS",
+    "ANCIENT AUTHORS AFTER VERGIL",
+    "ANCIENT COMMENTAMES, SCHOLIA",
+    "ANCIENT LIVES",
+    "APPENDIX VERGILIANA",
+    "ART AND THE AENEID",
+    "BIBLIOGRAPHY",
+    "CHARACTERS",
+    "COMMEMORATIVE VOLUME",
+    "CURRENT OR OUT OF PRINT",
+    "ECLOGUES: GENERAL",
+    "ECLOGUES: INDIVIDUAL POEMS",
+    "EIGHTEENTH-CENTURY WRITERS",
+    "FOREIGN BOOKS",
+    "GEORGICS: GENERAL",
+    "GEORGICS: INDIVIDUAL POEMS",
+    "LANDSCAPE, TOPOGRAPHY AND ARCHAEOLOGY",
+    "LEXICA, COLLECTIONS",
+    "MANUSCRIPTS, TEXTUAL TRADITION",
+    "NINETEENTH-CENTURY WRITERS",
+    "RELIGION AND PHILOSOPHY",
+    "RENAISSANCE AND TUDOR WRITERS",
+    "ROME AND AUGUSTUS",
+    "SEVENTEENTH-CENTURY WRITERS",
+    "STYLE, LANGUAGE, AND METER",
+    "THE MIDDLE AGES",
+    "TWENTIETH-CENTURY WRITERS",
+    "VERGDL AND LATER AGES: GENERAL",
+    "VERGIL AND ART",
+    "VERGIL AND AUGUSTAN WRITERS: VERSE",
+    "VERGIL AND EARLIER WRITERS",
+    "VERGIL AND MUSIC"
+  ]
+}

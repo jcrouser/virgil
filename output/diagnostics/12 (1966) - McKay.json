@@ -1,0 +1,78 @@
+{
+  "document": "12 (1966) - McKay.pdf",
+  "parser_family": "narrative",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 612,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2672,
+      "line_count": 78,
+      "numbered_entry_lines": 2,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2957,
+      "line_count": 82,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 3002,
+      "line_count": 82,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 3189,
+      "line_count": 86,
+      "numbered_entry_lines": 1,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 3077,
+      "line_count": 83,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2997,
+      "line_count": 88,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 1522,
+      "line_count": 46,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID",
+    "APPENDIX VERGILIANA, VITAE",
+    "ECLOGUES",
+    "GENERAL STUDIES, REVIEWS, TRANSLATIONS",
+    "GEORGICS",
+    "VERGILIUS"
+  ]
+}

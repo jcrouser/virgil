@@ -1,0 +1,119 @@
+{
+  "document": "14 (1968) - McKay.pdf",
+  "parser_family": "narrative",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 611,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 1450,
+      "line_count": 46,
+      "numbered_entry_lines": 0,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2871,
+      "line_count": 39,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 1730,
+      "line_count": 43,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0005780346820809249
+    },
+    {
+      "page_number": 5,
+      "char_count": 1582,
+      "line_count": 47,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 1617,
+      "line_count": 54,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 1475,
+      "line_count": 44,
+      "numbered_entry_lines": 1,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 3396,
+      "line_count": 41,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 3618,
+      "line_count": 43,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 2179,
+      "line_count": 44,
+      "numbered_entry_lines": 0,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 1590,
+      "line_count": 45,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 1455,
+      "line_count": 46,
+      "numbered_entry_lines": 2,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 13,
+      "char_count": 2538,
+      "line_count": 33,
+      "numbered_entry_lines": 1,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID",
+    "BIBLIOGRAPHY",
+    "ECLOGUES",
+    "GENERAL STUDIES, TRANSLATIONS, CLASSICAL TRADITION,",
+    "GEORGICS",
+    "VERGILIAN",
+    "VERGILIUS"
+  ]
+}

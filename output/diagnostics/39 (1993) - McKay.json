@@ -1,0 +1,281 @@
+{
+  "document": "39 (1993) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 696,
+      "line_count": 11,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 1720,
+      "line_count": 33,
+      "numbered_entry_lines": 5,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 1816,
+      "line_count": 35,
+      "numbered_entry_lines": 16,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 1806,
+      "line_count": 34,
+      "numbered_entry_lines": 14,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 2066,
+      "line_count": 37,
+      "numbered_entry_lines": 11,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 2377,
+      "line_count": 39,
+      "numbered_entry_lines": 14,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2207,
+      "line_count": 41,
+      "numbered_entry_lines": 16,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 2598,
+      "line_count": 41,
+      "numbered_entry_lines": 14,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 2219,
+      "line_count": 41,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 2509,
+      "line_count": 41,
+      "numbered_entry_lines": 9,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 2153,
+      "line_count": 42,
+      "numbered_entry_lines": 17,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 2262,
+      "line_count": 42,
+      "numbered_entry_lines": 11,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 13,
+      "char_count": 2793,
+      "line_count": 38,
+      "numbered_entry_lines": 7,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 14,
+      "char_count": 2027,
+      "line_count": 38,
+      "numbered_entry_lines": 15,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 15,
+      "char_count": 1958,
+      "line_count": 38,
+      "numbered_entry_lines": 11,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 2357,
+      "line_count": 37,
+      "numbered_entry_lines": 13,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 17,
+      "char_count": 2070,
+      "line_count": 37,
+      "numbered_entry_lines": 14,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 18,
+      "char_count": 2151,
+      "line_count": 38,
+      "numbered_entry_lines": 13,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 19,
+      "char_count": 2104,
+      "line_count": 38,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 20,
+      "char_count": 2151,
+      "line_count": 38,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.00046490004649000463
+    },
+    {
+      "page_number": 21,
+      "char_count": 2273,
+      "line_count": 42,
+      "numbered_entry_lines": 15,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 22,
+      "char_count": 2126,
+      "line_count": 37,
+      "numbered_entry_lines": 7,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 23,
+      "char_count": 1924,
+      "line_count": 33,
+      "numbered_entry_lines": 11,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 24,
+      "char_count": 2476,
+      "line_count": 40,
+      "numbered_entry_lines": 17,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 25,
+      "char_count": 2254,
+      "line_count": 41,
+      "numbered_entry_lines": 12,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 26,
+      "char_count": 2115,
+      "line_count": 38,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 27,
+      "char_count": 1980,
+      "line_count": 35,
+      "numbered_entry_lines": 7,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 28,
+      "char_count": 1903,
+      "line_count": 40,
+      "numbered_entry_lines": 18,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0005254860746190226
+    },
+    {
+      "page_number": 29,
+      "char_count": 2032,
+      "line_count": 36,
+      "numbered_entry_lines": 10,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 30,
+      "char_count": 1178,
+      "line_count": 23,
+      "numbered_entry_lines": 5,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID : GENERAL",
+    "AENEID : INDIVIDUAL BOOKS",
+    "AENEID: LEGENDS AND MYTHS",
+    "ANCIENT AUTHORS AFTER VERGIL",
+    "ANCIENT COMMENTARIES, SCHOLIA",
+    "ANCIENT LIVES",
+    "APPENDIX VERGILIANA",
+    "ART AND THE AENEID",
+    "BIBLIOGRAPHY",
+    "CHARACTERS",
+    "ECLOGUES : GENERAL",
+    "EIGHTEENTH-CENTURY WRITERS",
+    "ENCYCLOPEDIA, COLLECTIONS",
+    "GEORGICS : INDIVIDUAL POEMS",
+    "GEORGICS: GENERAL",
+    "IN MEMORIAM",
+    "JOHN PATRICK SULLIVAN",
+    "LANDSCAPE, TOPOGRAPHY AND ARCHAEOLOGY",
+    "MANUSCRIPTS, TEXTUAL TRADITION",
+    "MODERN TRANSLATIONS",
+    "NINETEENTH-CENTURY WRITERS",
+    "RELIGION AND PHILOSOPHY",
+    "RENAISSANCE AND TUDOR WRITERS",
+    "ROME AND AUGUSTUS",
+    "SEVENTEENTH-CENTURY WRITERS",
+    "STYLE, LANGUAGE, AND METER",
+    "THE MIDDLE AGES",
+    "TWENTIETH-CENTURY WRITERS",
+    "VERGIL AND ART",
+    "VERGIL AND AUGUSTAN WRITERS: VERSE",
+    "VERGIL AND EARLIER WRITERS",
+    "VERGIL AND LATER AGES: GENERAL",
+    "VERGIL AND MUSIC"
+  ]
+}

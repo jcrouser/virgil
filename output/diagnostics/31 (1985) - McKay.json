@@ -1,0 +1,189 @@
+{
+  "document": "31 (1985) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 621,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2525,
+      "line_count": 54,
+      "numbered_entry_lines": 6,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2502,
+      "line_count": 55,
+      "numbered_entry_lines": 8,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 2509,
+      "line_count": 51,
+      "numbered_entry_lines": 12,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 2535,
+      "line_count": 54,
+      "numbered_entry_lines": 15,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 2742,
+      "line_count": 54,
+      "numbered_entry_lines": 12,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2762,
+      "line_count": 73,
+      "numbered_entry_lines": 12,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 2683,
+      "line_count": 41,
+      "numbered_entry_lines": 14,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 2295,
+      "line_count": 72,
+      "numbered_entry_lines": 18,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 2947,
+      "line_count": 44,
+      "numbered_entry_lines": 6,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 3089,
+      "line_count": 64,
+      "numbered_entry_lines": 3,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 2593,
+      "line_count": 54,
+      "numbered_entry_lines": 11,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 13,
+      "char_count": 2756,
+      "line_count": 41,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 14,
+      "char_count": 2407,
+      "line_count": 60,
+      "numbered_entry_lines": 11,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 15,
+      "char_count": 2749,
+      "line_count": 46,
+      "numbered_entry_lines": 14,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 2443,
+      "line_count": 48,
+      "numbered_entry_lines": 15,
+      "section_headers": 4,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 17,
+      "char_count": 2367,
+      "line_count": 55,
+      "numbered_entry_lines": 15,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 18,
+      "char_count": 2479,
+      "line_count": 47,
+      "numbered_entry_lines": 22,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 19,
+      "char_count": 2894,
+      "line_count": 58,
+      "numbered_entry_lines": 9,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 20,
+      "char_count": 2662,
+      "line_count": 37,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID: CHARACTERS",
+    "AENEID: GENERAL STUDIES",
+    "AENEID: GEOGRAPHY AND ARCHAEOLOGY",
+    "AENEID: INDIVIDUAL BOOKS",
+    "ANCIENT AUTHORS AFTER VERGIL",
+    "APPENDIX VERGILIANA",
+    "BIBLIOGRAPHY",
+    "ECLOGUES: INDIVIDUAL POEMS",
+    "EDITIONS AND TRANSLATIONS",
+    "GEORGICS: GENERAL STUDIES",
+    "GEORGICS: INDIVIDUAL BOOKS",
+    "MANUSCRIPTS",
+    "RELIGION AND PHILOSOPHY",
+    "ROME AND AUGUSTUS",
+    "SANDALION",
+    "STYLE, LANGUAGE, METRE",
+    "VERGIL AND EARLIER WRITERS",
+    "VERGIL AND LATER AGES",
+    "VERGIL AND OTHER AUGUSTAN POETS",
+    "VERGILIAN BIMILLENARY PUBLICATIONS",
+    "VERGILIUS"
+  ]
+}

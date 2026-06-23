@@ -1,0 +1,82 @@
+{
+  "document": "16 (1970) - McKay.pdf",
+  "parser_family": "narrative",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 611,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2602,
+      "line_count": 57,
+      "numbered_entry_lines": 0,
+      "section_headers": 5,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2777,
+      "line_count": 60,
+      "numbered_entry_lines": 0,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 3152,
+      "line_count": 58,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 3198,
+      "line_count": 49,
+      "numbered_entry_lines": 0,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 2825,
+      "line_count": 81,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 3666,
+      "line_count": 51,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 2787,
+      "line_count": 39,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID",
+    "ANNOUNCEMENT",
+    "APPENDIX VERGILIANA",
+    "BIBLIOGRAPHY",
+    "ECLOGUES",
+    "GENERAL STUDIES, CLASSICAL TRADITION, ARCHAEOLOGY",
+    "GEORGICS",
+    "INTRODUCTION",
+    "VERGILIAN",
+    "VERGILIUS"
+  ]
+}

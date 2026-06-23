@@ -1,0 +1,254 @@
+{
+  "document": "50 (2004) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 698,
+      "line_count": 11,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 1519,
+      "line_count": 31,
+      "numbered_entry_lines": 3,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 1802,
+      "line_count": 36,
+      "numbered_entry_lines": 13,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 1706,
+      "line_count": 35,
+      "numbered_entry_lines": 10,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 1664,
+      "line_count": 35,
+      "numbered_entry_lines": 13,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 1591,
+      "line_count": 33,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 1827,
+      "line_count": 35,
+      "numbered_entry_lines": 8,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 1755,
+      "line_count": 38,
+      "numbered_entry_lines": 16,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 2031,
+      "line_count": 37,
+      "numbered_entry_lines": 11,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 1812,
+      "line_count": 36,
+      "numbered_entry_lines": 13,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 1825,
+      "line_count": 32,
+      "numbered_entry_lines": 7,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 1910,
+      "line_count": 35,
+      "numbered_entry_lines": 4,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 13,
+      "char_count": 1864,
+      "line_count": 34,
+      "numbered_entry_lines": 9,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 14,
+      "char_count": 1689,
+      "line_count": 34,
+      "numbered_entry_lines": 5,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 15,
+      "char_count": 1906,
+      "line_count": 35,
+      "numbered_entry_lines": 10,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 16,
+      "char_count": 1609,
+      "line_count": 35,
+      "numbered_entry_lines": 7,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 17,
+      "char_count": 1823,
+      "line_count": 37,
+      "numbered_entry_lines": 8,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 18,
+      "char_count": 1701,
+      "line_count": 33,
+      "numbered_entry_lines": 6,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0005878894767783657
+    },
+    {
+      "page_number": 19,
+      "char_count": 1901,
+      "line_count": 35,
+      "numbered_entry_lines": 11,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 20,
+      "char_count": 1781,
+      "line_count": 38,
+      "numbered_entry_lines": 11,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 21,
+      "char_count": 1965,
+      "line_count": 35,
+      "numbered_entry_lines": 6,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 22,
+      "char_count": 1845,
+      "line_count": 35,
+      "numbered_entry_lines": 5,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 23,
+      "char_count": 1774,
+      "line_count": 33,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 24,
+      "char_count": 1482,
+      "line_count": 35,
+      "numbered_entry_lines": 7,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 25,
+      "char_count": 1727,
+      "line_count": 32,
+      "numbered_entry_lines": 7,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 26,
+      "char_count": 1794,
+      "line_count": 34,
+      "numbered_entry_lines": 9,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 27,
+      "char_count": 712,
+      "line_count": 15,
+      "numbered_entry_lines": 4,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID: CHARACTERS",
+    "AENEID: GENERAL",
+    "AENEID: INDIVIDUAL BOOKS VII-XII",
+    "ANCIENT AUTHORS AFTER VERGIL",
+    "ANCIENT COMMENTARIES: SCHOLIA: VITAE",
+    "ANNUAL BIBLIOGRAPHY",
+    "APPENDIX VERGILIANA",
+    "BIBLIOGRAPHY",
+    "ECLOGUES: GENERAL",
+    "ECLOGUES: INDIVIDUAL POEMS",
+    "EIGHTEENTH CENTURY",
+    "GEORGICS: GENERAL",
+    "GEORGICS: INDIVIDUAL POEMS",
+    "LANDSCAPE, HISTORY, AND MATERIAL CULTURE",
+    "LEXICA, COMPANIONS, AND COLLECTIONS",
+    "MCMASTER UNIVERSITY",
+    "NINETEENTH CENTURY",
+    "OBITUARIES",
+    "PHILOSOPHY AND RELIGION",
+    "RENAISSANCE AND TUDOR WRITERS",
+    "SEVENTEENTH CENTURY",
+    "STYLE, LANGUAGE, AND METER",
+    "THE MIDDLE AGES",
+    "TRANSLATIONS",
+    "TWENTIETH CENTURY",
+    "VERGIL AND ART",
+    "VERGIL AND AUGUSTAN WRITERS",
+    "VERGIL AND LATER AGES: GENERAL",
+    "VERGIL AND MUSIC",
+    "VIRGIL AND EARLIER WRITERS"
+  ]
+}

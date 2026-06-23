@@ -1,0 +1,78 @@
+{
+  "document": "13 (1967) - McKay.pdf",
+  "parser_family": "enumerated",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 620,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2529,
+      "line_count": 43,
+      "numbered_entry_lines": 8,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 3,
+      "char_count": 2816,
+      "line_count": 50,
+      "numbered_entry_lines": 18,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 4,
+      "char_count": 2938,
+      "line_count": 40,
+      "numbered_entry_lines": 7,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 2564,
+      "line_count": 37,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 1551,
+      "line_count": 41,
+      "numbered_entry_lines": 7,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 2874,
+      "line_count": 51,
+      "numbered_entry_lines": 14,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 831,
+      "line_count": 44,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "AENEID",
+    "APPEND",
+    "BIBLIOGRAPHY",
+    "ECLOGUES",
+    "GENERAL STUDIES, TRANSLATIONS, CLASSICAL TRADITION,",
+    "GEORGICS"
+  ]
+}

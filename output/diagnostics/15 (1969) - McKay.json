@@ -1,0 +1,114 @@
+{
+  "document": "15 (1969) - McKay.pdf",
+  "parser_family": "narrative",
+  "page_stats": [
+    {
+      "page_number": 1,
+      "char_count": 612,
+      "line_count": 9,
+      "numbered_entry_lines": 0,
+      "section_headers": 0,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 2,
+      "char_count": 2279,
+      "line_count": 50,
+      "numbered_entry_lines": 0,
+      "section_headers": 5,
+      "probable_ocr_noise": 0.00043878894251864854
+    },
+    {
+      "page_number": 3,
+      "char_count": 2649,
+      "line_count": 45,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.00037750094375235937
+    },
+    {
+      "page_number": 4,
+      "char_count": 2057,
+      "line_count": 50,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 5,
+      "char_count": 1928,
+      "line_count": 48,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 6,
+      "char_count": 4011,
+      "line_count": 46,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 7,
+      "char_count": 1985,
+      "line_count": 43,
+      "numbered_entry_lines": 0,
+      "section_headers": 3,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 8,
+      "char_count": 1747,
+      "line_count": 56,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 9,
+      "char_count": 1735,
+      "line_count": 50,
+      "numbered_entry_lines": 2,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 10,
+      "char_count": 3105,
+      "line_count": 49,
+      "numbered_entry_lines": 1,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 11,
+      "char_count": 3942,
+      "line_count": 44,
+      "numbered_entry_lines": 0,
+      "section_headers": 1,
+      "probable_ocr_noise": 0.0
+    },
+    {
+      "page_number": 12,
+      "char_count": 1180,
+      "line_count": 24,
+      "numbered_entry_lines": 0,
+      "section_headers": 2,
+      "probable_ocr_noise": 0.0
+    }
+  ],
+  "detected_sections": [
+    "ADDENDA",
+    "AENEID",
+    "APPENDIX VERGILIANA, SERVIUS",
+    "BIBLIOGRAPHY",
+    "ECLOGUES",
+    "GENERAL STUDIES, TRANSLATIONS, CLASSICAL TRADITION, ARCHAEOLOGY",
+    "GEORGICS",
+    "INTRODUCTION",
+    "VERGILIAN",
+    "VERGILIUS"
+  ]
+}
