@@ -3,3 +3,9 @@
 .AppleDouble
 .LSOverride
 ._*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+output/
