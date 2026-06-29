@@ -1,0 +1,5 @@
+PyMuPDF
+pandas
+pydantic
+rich
+tqdm
