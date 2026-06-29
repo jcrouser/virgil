@@ -127,6 +127,135 @@ def repair_confusable_glyphs(text: str) -> str:
     return text.translate(CYRILLIC_LATIN_CONFUSABLES)
 
 
+SHIFTED_ASCII_MARKERS = (
+    "\x03",  # space encoded 29 code points too low
+    "\x15\x13",  # years beginning with 20..
+    "9HUJ",  # Verg...
+    "6KLUOH",  # Shirle...
+    "ELEOLRJUDSK",  # bibliograph...
+    "DQG",  # and
+    "HGV",  # eds
+    "WKH",  # the
+    "LQ",  # in
+    "RI",  # of
+    "0DLD",  # Maia
+    "5LY",  # Riv...
+    "0L",  # Mi...
+    "$",  # A
+)
+
+HIGH_SHIFTED_ASCII_MARKERS = (
+    "OMOP",  # 2023
+    "sergil",  # Vergil...
+    "tilli",  # Willi...
+    "compil~tion",  # compilation
+)
+
+
+def _shifted_ascii_score(text: str) -> int:
+    control_chars = len(re.findall(r"[\x01-\x1f]", text))
+    visible_markers = sum(text.count(marker) for marker in SHIFTED_ASCII_MARKERS)
+    return control_chars + visible_markers * 8
+
+
+def _low_shifted_visible_marker_score(text: str) -> int:
+    return sum(
+        text.count(marker)
+        for marker in SHIFTED_ASCII_MARKERS
+        if marker != "\x03"
+    )
+
+
+def _high_shifted_ascii_score(text: str) -> int:
+    visible_markers = sum(
+        text.count(marker)
+        for marker in HIGH_SHIFTED_ASCII_MARKERS
+    )
+    separator_markers = text.count("=") + text.count("~")
+    return visible_markers * 8 + separator_markers
+
+
+def _high_shifted_visible_marker_score(text: str) -> int:
+    return sum(text.count(marker) for marker in HIGH_SHIFTED_ASCII_MARKERS)
+
+
+def repair_shifted_ascii_text_layer(text: str) -> str:
+    """Repair PDFs whose ToUnicode map emits ASCII 29 code points too low.
+
+    Some recent JSTOR/PDF text layers encode ordinary ASCII shifted by 29 code
+    points. The corpus contains both directions: ``9HUJLOLDQ`` is ``Vergilian``
+    in one map, while ``sergilius`` is ``Vergilius`` in another. These repairs
+    are gated by visible markers so ordinary text is left alone.
+    """
+    if not text:
+        return text
+
+    low_score = _shifted_ascii_score(text)
+    if low_score >= 8 and _low_shifted_visible_marker_score(text):
+        repaired = []
+        for index, char in enumerate(text):
+            code = ord(char)
+            previous_char = text[index - 1] if index else ""
+            next_char = text[index + 1] if index + 1 < len(text) else ""
+            if char in "\n\r\t":
+                repaired.append(char)
+            elif char == " ":
+                repaired.append(char)
+            elif char.isdigit():
+                if next_char.isalpha() or previous_char.isalpha():
+                    repaired.append(chr(code + 29))
+                else:
+                    repaired.append(char)
+            elif char == ":":
+                if next_char.isupper():
+                    repaired.append(chr(code + 29))
+                else:
+                    repaired.append(char)
+            elif char in ".,;?!'\"()[]-":
+                repaired.append(char)
+            elif char.isupper():
+                if (
+                    previous_char.isupper()
+                    or next_char.isupper()
+                    or previous_char.isdigit()
+                    or (previous_char and previous_char in "$&*/:")
+                ):
+                    repaired.append(chr(code + 29))
+                else:
+                    repaired.append(char)
+            elif char.islower():
+                repaired.append(char)
+            elif 1 <= code <= 97:
+                repaired.append(chr(code + 29))
+            else:
+                repaired.append(char)
+
+        candidate = "".join(repaired)
+        if _shifted_ascii_score(candidate) < low_score:
+            text = candidate
+    elif "\x03" in text:
+        text = text.replace("\x03", " ")
+
+    high_score = _high_shifted_ascii_score(text)
+    if high_score < 8 or not _high_shifted_visible_marker_score(text):
+        return text
+
+    repaired = []
+    for char in text:
+        code = ord(char)
+        if char in "\n\r\t":
+            repaired.append(char)
+        elif 61 <= code <= 126:
+            repaired.append(chr(code - 29))
+        else:
+            repaired.append(char)
+
+    candidate = "".join(repaired)
+    if _high_shifted_ascii_score(candidate) < high_score:
+        return candidate
+    return text
+
+
 def normalize_extracted_text(text: str) -> str:
     """Normalize the raw PyMuPDF text layer before any parsing decisions.
 
@@ -134,6 +263,7 @@ def normalize_extracted_text(text: str) -> str:
     not flatten line breaks, because line breaks are still useful when deciding
     whether a quotation mark was dropped or a word was hyphenated across lines.
     """
+    text = repair_shifted_ascii_text_layer(text)
     text = repair_mojibake(text)
     text = repair_confusable_glyphs(text)
     text = text.replace("\x00", "")
@@ -205,7 +335,9 @@ def normalize_entry_text(text: str) -> str:
 # Entry numbers in these PDFs are mostly ordinary "15." strings, but OCR/text
 # extraction occasionally inserts spaces: "1 5 .". A year at the start of a
 # continuation line ("2006. Title...") should not become entry #2006.
-ENTRY_RE = re.compile(r"^\s*((?:\d\s*){1,4})\.\s+(.*)")
+# The leading \.? handles rare OCR artifacts where the previous line's terminal
+# period bleeds onto the next line: ".50. Author..." should match as entry 50.
+ENTRY_RE = re.compile(r"^\s*\.?\s*((?:\d\s*){1,4})\.\s+(.*)")
 MAX_REASONABLE_ENTRY_NUMBER = 1000
 SECTION_RE = re.compile(r"^[A-Z][A-Z\s:\-&,']+$")
 YEAR_RE = re.compile(r"\b(?:19|20)\d{2}\b")
@@ -276,6 +408,39 @@ PUBLICATION_START_RE = re.compile(
     r"))",
     flags=re.IGNORECASE,
 )
+
+# Third-person verbs that appear in McKay/Werner group commentary sentences,
+# e.g. "Geymonat favours...", "Cicu analyses...", "Bauzá is concerned with...".
+# Used by EnumeratedParser._is_commentary_prose_line() to distinguish prose
+# paragraphs from bibliographic entry continuation lines.
+_COMMENTARY_VERBS: frozenset[str] = frozenset({
+    "offers", "offer", "provides", "provide", "argues", "argue",
+    "explores", "explore", "studies", "study", "favours", "favors",
+    "favour", "favor", "gives", "give", "discusses", "discuss",
+    "examines", "examine", "analyses", "analyzes", "analyze", "analyse",
+    "suggests", "suggest", "takes", "take", "outlines", "outline",
+    "considers", "consider", "notes", "note", "presents", "present",
+    "treats", "treat", "defends", "defend", "proposes", "propose",
+    "attacks", "attack", "accepts", "accept", "rejects", "reject",
+    "surveys", "survey", "reviews", "review", "traces", "trace",
+    "compares", "compare", "interprets", "interpret", "concludes",
+    "conclude", "maintains", "maintain", "shows", "show", "focuses",
+    "focusses", "focus", "highlights", "highlight", "deals", "deal",
+    "addresses", "address", "stresses", "stress", "detects", "detect",
+    "observes", "observe", "establishes", "establish", "classifies",
+    "classify", "points", "point", "remarks", "remark", "finds", "find",
+    "follows", "follow", "reads", "read", "dates", "date", "identifies",
+    "identify", "believes", "believe", "claims", "claim", "contends",
+    "contend", "supports", "support", "doubts", "doubt", "questions",
+    "question", "places", "place", "attempts", "attempt", "denies", "deny",
+    "continues", "continue", "seems", "seem", "appears", "appear",
+    "is", "are", "was", "were", "has", "have", "had",
+    "demonstrates", "demonstrate", "illustrates", "illustrate",
+    "asserts", "assert", "affirms", "affirm", "insists", "insist",
+    "challenges", "challenge", "contradicts", "contradict",
+    "introduces", "introduce", "concentrates", "concentrate",
+    "attempts", "attempt", "seeks", "seek", "tries", "try",
+})
 
 # Name-ish author block before a title. Useful for entries whose first year is
 # in the journal/publication citation, not after the author.
@@ -1225,12 +1390,117 @@ class EnumeratedParser:
             segment_warning=segments.segment_warning,
         )
 
+    def _is_commentary_prose_line(self, line: str) -> bool:
+        """Return True when a line looks like the start of a group commentary paragraph.
+
+        McKay (and Werner) bibliography sections sometimes follow a group of
+        numbered entries with a prose paragraph that discusses several of those
+        entries at once.  These paragraphs must NOT be attached to the last
+        numbered entry — they belong to the group as a whole.
+
+        Three detection patterns are used:
+
+        1. Possessive personal name: "Lyne's introduction takes a fresh..."
+        2. Surname + scholarly verb within first six words:
+           "Geymonat favours Bucolica", "Cicu analyses Georgics"
+        3. Early parenthetical entry reference + prose density:
+           "Poeschi (1) offers a clear analysis" (McKay's notation style)
+        """
+        line = line.strip()
+        if not line:
+            return False
+        if _parse_entry_line(line) is not None:
+            return False
+        if REVIEW_RE.search(line):
+            return False
+        if self.is_section_header(line):
+            return False
+        if line.startswith('"') or line.startswith("'"):
+            return False
+
+        words = line.split()
+        if len(words) < 5:
+            return False
+
+        # Pattern 1: possessive personal surname, e.g. "Lyne's introduction…"
+        if re.match(r"^[A-ZÀ-Þ][a-zÀ-ÿ]{2,}\'s\s+", line):
+            return True
+
+        # Pattern 2: capitalized surname + scholarly verb within first six words
+        first_word_alpha = re.sub(r"[^A-Za-zÀ-ÿ]", "", words[0])
+        if re.match(r"^[A-ZÀ-Þ][a-zÀ-ÿ]{2,}", first_word_alpha):
+            for w in words[1:6]:
+                if re.sub(r"[^a-zA-Z]", "", w).lower() in _COMMENTARY_VERBS:
+                    return True
+
+        # Pattern 3: parenthetical entry reference in first five words
+        # (McKay's commentary often references its own entries as "(N)")
+        early_text = " ".join(words[:5])
+        if re.search(r"\(\d+\)", early_text) and len(words) >= 8:
+            lowercase_count = sum(1 for w in words if w and w[0].islower())
+            if lowercase_count >= 4:
+                return True
+
+        return False
+
+    def _make_commentary_record(
+        self,
+        lines: List[str],
+        page_start: int,
+        page_end: int,
+        section: Optional[str],
+        preceding_entry_number: int,
+        source_pdf: str,
+    ) -> "BibliographyRecord":
+        """Build a BibliographyRecord for a group commentary block."""
+        text_original = "\n".join(lines)
+        text = normalize_entry_text(text_original)
+        return BibliographyRecord(
+            parser_family="group_commentary",
+            source_pdf=source_pdf,
+            page_start=page_start,
+            page_end=page_end,
+            section=section,
+            entry_number=preceding_entry_number,
+            entry_type="group_commentary",
+            raw_text=text,
+            raw_text_original=normalize_extracted_text(text_original),
+            authors=[],
+            year=None,
+            title=None,
+            publication_block=None,
+            commentary=text,
+            reviews=[],
+            confidence=1.0,
+        )
+
     def parse_pdf(self, pdf_path: Path) -> List[BibliographyRecord]:
         """Parse one PDF into records and write its per-PDF JSON file."""
         doc = fitz.open(pdf_path)
         current_section = None
         current_entry: Optional[CurrentEntry] = None
         records: list[BibliographyRecord] = []
+
+        # Group commentary state — a prose paragraph that follows a block of
+        # numbered entries and discusses multiple of them at once.  It must be
+        # kept separate from any single entry's data.
+        commentary_lines: list[str] = []
+        commentary_page_start: int = 1
+        last_entry_number: int = 0  # tracks the last finalized entry number
+
+        def flush_commentary(page_end: int) -> None:
+            nonlocal commentary_lines
+            if not commentary_lines:
+                return
+            records.append(self._make_commentary_record(
+                lines=commentary_lines,
+                page_start=commentary_page_start,
+                page_end=page_end,
+                section=current_section,
+                preceding_entry_number=last_entry_number,
+                source_pdf=pdf_path.name,
+            ))
+            commentary_lines = []
 
         for page_number in range(len(doc)):
             page = doc.load_page(page_number)
@@ -1243,15 +1513,18 @@ class EnumeratedParser:
 
             for line in lines:
                 if self.is_section_header(line):
+                    flush_commentary(page_number + 1)
                     current_section = line
                     continue
 
                 entry_info = _parse_entry_line(line)
                 if entry_info is not None:
+                    flush_commentary(page_number + 1)
                     entry_number, entry_text = entry_info
                     if current_entry:
                         records.append(self.finalize_entry(current_entry, page_number + 1, pdf_path.name))
-
+                        last_entry_number = current_entry.entry_number
+                        current_entry = None
                     current_entry = CurrentEntry(
                         entry_number=entry_number,
                         section=current_section,
@@ -1261,14 +1534,35 @@ class EnumeratedParser:
                     )
                     continue
 
-                if current_entry is None:
+                # Skip pre-content lines before any entry has been seen
+                if current_entry is None and not commentary_lines:
                     continue
 
+                # Detect the start of a new group commentary block.
+                # Once detected, the preceding entry is finalised immediately so
+                # the commentary text is never mixed into a single entry's data.
+                if not commentary_lines and self._is_commentary_prose_line(line):
+                    if current_entry:
+                        records.append(self.finalize_entry(current_entry, page_number + 1, pdf_path.name))
+                        last_entry_number = current_entry.entry_number
+                        current_entry = None
+                    commentary_page_start = page_number + 1
+                    commentary_lines.append(line)
+                    continue
+
+                if commentary_lines:
+                    # Continue accumulating the commentary block until a new
+                    # entry or section header resets the state (handled above).
+                    commentary_lines.append(line)
+                    continue
+
+                # Normal entry continuation line
                 if self.is_commentary(line):
                     current_entry.commentary_lines.append(line)
                 else:
                     current_entry.lines.append(line)
 
+        flush_commentary(len(doc))
         if current_entry:
             records.append(self.finalize_entry(current_entry, len(doc), pdf_path.name))
 
