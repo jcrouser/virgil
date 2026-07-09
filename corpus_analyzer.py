@@ -20,8 +20,29 @@ console = Console()
 
 SECTION_RE = re.compile(r"^[A-Z][A-Z\s:\-&,']+$")
 ENTRY_RE = re.compile(r"^\s*(\d+)\.\s+")
+
+# A volume is "null" only when it explicitly declares that it carries no
+# bibliography, e.g. Vergilius 67: "volume 67 does not contain a Vergilian
+# bibliography."  An earlier version also matched the bare phrase "special
+# issue", which occurs inside ordinary bibliography entries and prose (a
+# journal's special issue), and wrongly discarded volumes 27, 48, and 64.
 NULL_RE = re.compile(
-    r"does not contain.*bibliograph|no bibliography|special issue",
+    r"does\s+not\s+contain\s+(?:\w+\s+){0,3}bibliograph"
+    r"|there\s+is\s+no\s+(?:\w+\s+){0,2}bibliograph"
+    r"|no\s+(?:\w+\s+){0,2}bibliography\s+(?:was|is|will|appears)\b",
+    re.IGNORECASE,
+)
+
+# Page furniture that the all-caps SECTION_RE would otherwise accept as a real
+# section header. "VERGILIUS" is the journal's running head, not a category.
+RUNNING_HEADER_RE = re.compile(
+    r"^(?:"
+    r"VERGILIUS(?:\s+\d{1,3})?"
+    r"|\d{1,3}\s+VERGILIUS"
+    r"|SHIRLEY\s+WERNER"
+    r"|\d{1,3}\s*-\s*SHIRLEY\s+WERNER"
+    r"|SHIRLEY\s+WERNER\s*-\s*\d{1,3}"
+    r")$",
     re.IGNORECASE,
 )
 
@@ -139,7 +160,10 @@ class CorpusAnalyzer:
 
         parser_family = self.classify_document(all_lines, full_text)
 
-        has_bibliography = not bool(NULL_RE.search(full_text))
+        # classify_document() already applies the null declaration plus the
+        # numbered-entry guard, so trust its verdict rather than re-running the
+        # bare regex, which would disagree with it on volumes 27, 48, and 64.
+        has_bibliography = parser_family != "null"
 
         avg_chars = statistics.mean(p.char_count for p in page_stats)
         avg_lines = statistics.mean(p.line_count for p in page_stats)
@@ -230,6 +254,9 @@ class CorpusAnalyzer:
         if len(line.split()) > 12:
             return False
 
+        if RUNNING_HEADER_RE.match(line.strip()):
+            return False
+
         if SECTION_RE.match(line):
             return True
 
@@ -276,7 +303,10 @@ class CorpusAnalyzer:
         numbered_ratio = numbered_lines / total_lines
         prose_ratio = prose_lines / total_lines
 
-        if NULL_RE.search(full_text):
+        # A null declaration only wins when the document also lacks the bulk of
+        # numbered entries. This keeps a single unlucky sentence from discarding
+        # a volume that plainly carries a bibliography.
+        if NULL_RE.search(full_text) and numbered_lines < 20:
             return "null"
 
         if numbered_ratio > 0.05 and section_lines > 5:
