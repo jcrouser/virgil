@@ -12,7 +12,6 @@ import fitz
 from enumerated_parser import (
     CurrentEntry,
     EnumeratedParser,
-    YEAR_RE,
     _parse_entry_line,
     normalize_extracted_text,
 )
@@ -89,6 +88,20 @@ class HangingIndentParser(EnumeratedParser):
         return float(median(low_band))
 
     def _looks_like_running_header(self, text: str) -> bool:
+        text = text.strip()
+        # Werner's running heads take both orders, e.g. "132 - Shirley Werner"
+        # and "Vergilian Bibliography - 185". normalize_extracted_text() has
+        # already folded en/em dashes to "-".
+        if re.fullmatch(r"\d{1,3}\s*-\s*Shirley\s+Werner", text, flags=re.IGNORECASE):
+            return True
+        if re.fullmatch(r"Shirley\s+Werner\s*-\s*\d{1,3}", text, flags=re.IGNORECASE):
+            return True
+        if re.fullmatch(r"Vergilian\s+Bibliography\s*-\s*\d{1,3}", text, flags=re.IGNORECASE):
+            return True
+        if re.fullmatch(r"\d{1,3}\s*-\s*Vergilian\s+Bibliography", text, flags=re.IGNORECASE):
+            return True
+        if re.fullmatch(r"Vergilius(?:\s+\d{1,3})?", text, flags=re.IGNORECASE):
+            return True
         if re.match(r"^\d+\s+Vergilius\b", text):
             return True
         if re.match(r"^Vergilian Bibliography\b", text, flags=re.IGNORECASE):
@@ -97,27 +110,50 @@ class HangingIndentParser(EnumeratedParser):
             return True
         return False
 
+    # Werner entries are author-date and open in one of a few fixed shapes.
+    # Matching those shapes directly is far more reliable than looking for a
+    # year on the first line: the year frequently wraps onto the indented
+    # continuation line, as in
+    #     Carvounis, Katerina, ... and Giampiero Scafoglio, eds.
+    #         2023. Later Greek Epic and the Latin Literary Tradition. ...
+    # The old rule required a year, a leading quote, or a role marker followed
+    # by whitespace, so entries like the above were never recognised and their
+    # text was appended to the preceding record instead.
+    _SURNAME_COMMA_RE = re.compile(
+        r"^\w[\w'’\-]*(?:\s+\w[\w'’\-]*){0,2},\s+\S",
+        flags=re.UNICODE,
+    )
+    _SURNAME_YEAR_RE = re.compile(
+        r"^\w[\w'’\-]*(?:\s+\w[\w'’\-]*){0,2}\.\s+(?:19|20)\d{2}\b",
+        flags=re.UNICODE,
+    )
+    _ROLE_MARKER_RE = re.compile(r"\b(?:eds?|trans)\.(?:\s|$)", flags=re.IGNORECASE)
+
     def _looks_like_bibliographic_start(self, text: str) -> bool:
+        text = text.strip()
         if _parse_entry_line(text) is not None:
             return False
         if self.is_section_header(text):
             return False
         if self._looks_like_running_header(text):
             return False
+        # Group commentary sits at the body margin too, so it must be rejected
+        # here or every commentary sentence would open a new record.
+        if self._is_commentary_prose_line(text):
+            return False
         if len(text.split()) < 3:
             return False
 
-        has_year = YEAR_RE.search(text) is not None
-        has_author_punctuation = bool(
-            re.match(
-                r"^[A-ZÀ-Þ][A-Za-zÀ-ÿ'’.\-]+(?:,\s+|\.\s+|\s+[A-Z]\.)",
-                text,
-            )
-        )
-        title_first = text.startswith('"')
-        role_marker = bool(re.search(r"\b(?:ed|eds|trans)\.\s+", text))
+        if text.startswith('"'):
+            return True
+        if not (text[0].isalpha() and text[0].isupper()):
+            return False
 
-        return has_year or title_first or (has_author_punctuation and role_marker)
+        return bool(
+            self._SURNAME_COMMA_RE.match(text)
+            or self._SURNAME_YEAR_RE.match(text)
+            or self._ROLE_MARKER_RE.search(text)
+        )
 
     def _is_entry_start(self, line: LayoutLine, body_left: float) -> bool:
         at_left_margin = line.x0 <= body_left + self.left_tolerance
