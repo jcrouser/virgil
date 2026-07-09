@@ -340,6 +340,23 @@ def normalize_entry_text(text: str) -> str:
 ENTRY_RE = re.compile(r"^\s*\.?\s*((?:\d\s*){1,4})\.\s+(.*)")
 MAX_REASONABLE_ENTRY_NUMBER = 1000
 SECTION_RE = re.compile(r"^[A-Z][A-Z\s:\-&,']+$")
+
+# Page furniture. "VERGILIUS" is the journal's running head; SECTION_RE would
+# otherwise accept it as a section and it would overwrite the real category for
+# every entry on the page. Dashes are already folded to "-" by
+# normalize_extracted_text(), so only the ASCII hyphen needs matching here.
+RUNNING_HEADER_RE = re.compile(
+    r"^(?:"
+    r"VERGILIUS(?:\s+\d{1,3})?"
+    r"|\d{1,3}\s+VERGILIUS"
+    r"|SHIRLEY\s+WERNER"
+    r"|\d{1,3}\s*-\s*SHIRLEY\s+WERNER"
+    r"|SHIRLEY\s+WERNER\s*-\s*\d{1,3}"
+    r"|VERGILIAN\s+BIBLIOGRAPHY\s*-\s*\d{1,3}"
+    r"|\d{1,3}\s*-\s*VERGILIAN\s+BIBLIOGRAPHY"
+    r")$",
+    flags=re.IGNORECASE,
+)
 YEAR_RE = re.compile(r"\b(?:19|20)\d{2}\b")
 REVIEW_RE = re.compile(r"\bRev(?:iews?)?:\s*(.*)", flags=re.IGNORECASE)
 
@@ -1135,12 +1152,16 @@ class EnumeratedParser:
             return True
         if line.startswith("JSTOR is a not-for-profit service"):
             return True
+        if RUNNING_HEADER_RE.match(line):
+            return True
         return False
 
     def is_section_header(self, line: str) -> bool:
         """Recognize all-caps section headers such as `BIBLIOGRAPHY`."""
         line = line.strip()
         if len(line.split()) > 8:
+            return False
+        if RUNNING_HEADER_RE.match(line):
             return False
         return bool(SECTION_RE.match(line))
 
